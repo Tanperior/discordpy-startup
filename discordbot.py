@@ -15,23 +15,12 @@ dateTimeList = [
 '21:00',
 ]
 
-async def SendMessage():
-    channel = client.get_channel(CHANNEL_ID)
-    await channel.send('収入が利用可能です！　@メンバー')
-    
-    @tasks.loop(seconds=30)
-async def loop():
-    channel = client.get_channel(CHANNEL_ID)
-    await channel.send('テスト') 
-    loop.start()
 
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
-    
-
 
 @bot.command()
 async def pop(ctx):
