@@ -21,7 +21,7 @@ dateTimeList = [
 '17:00',
 '21:00',
 ]
-
+CHANNEL_ID = 710111629806927943
 @bot.command()
 async def ping(ctx):    
     await ctx.send('pong')
