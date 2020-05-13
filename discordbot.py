@@ -52,9 +52,5 @@ async def on_message(message):
 
 #ループ処理
 time_check.start()
-# Botの起動とDiscordサーバーへの接続
-client.run(TOKEN)
-
-
 
 bot.run(token)
