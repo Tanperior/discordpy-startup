@@ -16,7 +16,7 @@ dateTimeList = [
 '21:00',
 '02:12',
 ]
-
+client = discord.Client()
 
 
 @bot.event
@@ -34,7 +34,14 @@ async def pop(ctx):
 async def 草蛇(ctx):
     await ctx.send('ジャローダ')
 
+@tasks.loop(seconds=60)
+async def loop():
+    channel = client.get_channel(CHANNEL_ID)
+    await channel.send('TOM')  
+ 
 
+#ループ処理実行
+loop.start()
 
 bot.run(token)
 
