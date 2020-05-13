@@ -18,6 +18,12 @@ dateTimeList = [
 async def SendMessage():
     channel = client.get_channel(CHANNEL_ID)
     await channel.send('収入が利用可能です！　@メンバー')
+    
+    @tasks.loop(seconds=30)
+async def loop():
+    channel = client.get_channel(CHANNEL_ID)
+    await channel.send('テスト') 
+    loop.start()
 
 @bot.event
 async def on_command_error(ctx, error):
