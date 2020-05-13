@@ -42,14 +42,6 @@ async def time_check():
         await SendMessage()
         #該当時間だった場合は２重に投稿しないよう３０秒余計に待機
         await asyncio.sleep(30)
-
-# メッセージ受信時に動作する処理
-@client.event
-async def on_message(message):
-    # メッセージ送信者がBotだった場合は無視する
-
-
-
 #ループ処理
 time_check.start()
 
