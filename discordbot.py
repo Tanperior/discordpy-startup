@@ -29,6 +29,9 @@ async def on_command_error(ctx, error):
 async def pop(ctx):
     await ctx.send('pong')
 
+@bot.command()
+async def 草蛇(ctx):
+    await ctx.send('ジャローダ')
 
 bot.run(token)
 
