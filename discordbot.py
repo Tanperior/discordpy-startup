@@ -14,7 +14,7 @@ dateTimeList = [
 '21:00',
 '02:12',
 ]
-client = discord.Client()
+
 
 
 @bot.event
